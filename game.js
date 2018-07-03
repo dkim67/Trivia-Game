@@ -23,7 +23,7 @@ $("body").on("click", ".answer", function(event){
 
 	userPick = $(this).text();
 	if(userPick === correctAnswers[questionCounter]) {
-		alert("correct");
+		
 
 		clearInterval(shotClock);
 		generateWin();
@@ -51,14 +51,14 @@ function timeOutLoss() {
 
 function generateWin() {
 	correctScore++;
-	gameHTML = "<p class='text-center timer-p'>Shot Clock: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + "Nice!!!!";
+	gameHTML = "<p class='text-center timer-p'>Shot Clock: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + "<p>" + "Nice Shot! Nothing but net!" + "</p>" + "<br><br>" + "<img src='https://media.giphy.com/media/uFGJyREjjFl2E/giphy.gif'>";
 	$(".box").html(gameHTML);
 	setTimeout(wait, 4000);  
 }
 
 function generateLoss() {
 	incorrectScore++;
-	gameHTML = "<p class='text-center timer-p'>Shot Clock: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='img/x.png'>";
+	gameHTML = "<p class='text-center timer-p'>Shot Clock: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img src='https://media.giphy.com/media/KhfqyBYo5pTO0/giphy.gif'>";
 	$(".box").html(gameHTML);
 	setTimeout(wait, 4000); //  
 }
@@ -95,7 +95,7 @@ function timer() {
 }
 
 function finalScreen() {
-	gameHTML = "<p class='text-center timer-p'>Shot Clock: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctScore + "</p>" + "<p>Wrong Answers: " + incorrectScore + "</p>" + "<p>Unanswered: " + unansweredScore + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
+	gameHTML = "<p class='text-center timer-p'>Shot Clock: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Game Stats: " + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctScore + "</p>" + "<p>Wrong Answers: " + incorrectScore + "</p>" + "<p>Unanswered: " + unansweredScore + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Play Again</a></p>";
 	$(".box").html(gameHTML);
 }
 

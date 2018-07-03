@@ -1,0 +1,30 @@
+body, html {
+    height: 100%;
+}
+
+p {
+    font-size: 200%;
+    color: rgb(125, 6, 6)
+}
+
+
+#bg {
+    background-image: url("nba.jpg");
+    z-index: 0;
+
+    /* Full height */
+    min-height: 100%; 
+    background-attachment: fixed;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: fixed; */
+}
+
+.text-center {
+    color: rgb(3, 5, 75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 300%;
+    
+}
